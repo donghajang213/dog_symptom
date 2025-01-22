@@ -40,6 +40,12 @@ public class ConsultationService {
     @Autowired
     private ChatRoomRepository chatRoomRepository;
 
+    @Autowired
+    public ConsultationService(ConsultationRequestByStatusRepository consultationRequestByStatusRepository, VetRepository vetRepository) {
+        this.consultationRequestByStatusRepository = consultationRequestByStatusRepository;
+        this.vetRepository = vetRepository;
+    }
+
     public ConsultationService(SimpMessagingTemplate messagingTemplate) {
         this.messagingTemplate = messagingTemplate;
     }
@@ -114,8 +120,16 @@ public class ConsultationService {
                 .collect(Collectors.toList());
     }
 
-    public int getPendingConsultationRequestCount(UUID vetId) {
-        return consultationRequestByVetRepository.findByVetIdAndStatus(vetId, "PENDING").size();
+    public long countPendingConsultationsByVetId(UUID vetId) {
+        System.out.println("Fetching pending consultations for vetId: " + vetId);
+        long count = consultationRequestByStatusRepository.countPendingConsultationsByVetId(vetId);
+        System.out.println("Pending consultations count: " + count);
+        return count;
+    }
+
+    // userId로 vetId를 찾는 메소드 추가
+    public UUID findVetIdByUserId(String userId) {
+        return vetRepository.findVetIdByUserId(userId);
     }
 
     @Transactional

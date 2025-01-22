@@ -14,4 +14,8 @@ public interface VetRepository extends CassandraRepository<VetEntity, UUID> {
 
     Optional<VetEntity> findByUserId(String userId);
 
+    // userId로 vetId 찾는 쿼리
+    @Query("SELECT vet_id FROM vet_info WHERE user_id = ?0")
+    UUID findVetIdByUserId(String userId);
+
 }

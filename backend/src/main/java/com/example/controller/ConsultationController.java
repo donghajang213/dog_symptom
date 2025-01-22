@@ -31,6 +31,11 @@ public class ConsultationController {
     @Autowired
     private SimpMessagingTemplate messagingTemplate;
 
+    @Autowired
+    public ConsultationController(ConsultationService consultationService) {
+        this.consultationService = consultationService;
+    }
+
 
     @PostMapping("/{vetId}/request")
     public ResponseEntity<?> requestConsultation(
@@ -85,13 +90,18 @@ public class ConsultationController {
     /**
      * 미확인 상담 요청 개수
      */
-    @GetMapping("/{vetId}/pendingRequestCount")
-    public ResponseEntity<Integer> getPendingConsultationRequestCount(@PathVariable String vetId) {
+    @GetMapping("/{userId}/pendingRequestCount")
+    public ResponseEntity<Long> getPendingConsultationRequestCount(@PathVariable String userId) {
         try {
-            UUID vetUuid = UUID.fromString(vetId);
-            return ResponseEntity.ok(consultationService.getPendingConsultationRequestCount(vetUuid));
+            System.out.println("Received vetId: " + userId); // 로그 추가
+            // userId를 vetInfo 테이블에서 vetId로 변환
+            UUID vetId = consultationService.findVetIdByUserId(userId);
+            long count = consultationService.countPendingConsultationsByVetId(vetId);
+            System.out.println("Pending count: " + count); // 로그 추가
+            return ResponseEntity.ok(count);
         } catch (IllegalArgumentException e) {
-            return ResponseEntity.badRequest().body(0);
+            System.out.println("Invalid User ID: " + userId); // 오류 로그 추가
+            return ResponseEntity.badRequest().body(0L);
         }
     }
 

@@ -8,7 +8,7 @@ import { SuccessPage } from './components/AdminPage/Payments/Sucess'; // 결제 
 import { FailPage } from './components/AdminPage/Payments/Fail'; // 결제 실패 페이지
 import { PaymentSuccessPage } from "./components/AdminPage/Payments/PaymentSuccessPage"; // 결제 완료 페이지
 import { PayPage } from "./components/AdminPage/Payments/PayPage"; // 뼈다귀 선택 페이지
-import { ChatRoom } from "./components/Chat/ChatRoom"; // 메인 채팅방
+import ChatRoom from "./components/Chat/ChatRoom"; // 메인 채팅방
 import MainPage from './components/MainPage/MainPage'; // 메인 페이지
 import Header from './components/Header/Header'; // 공통 헤더
 import Login from './components/Login/Login'; // 로그인 페이지
@@ -27,6 +27,25 @@ import PostList from "./components/Board/PostList"; // 게시판 리스트
 import BoardDetail from "./components/Board/PostDetail"; // 게시판 상세보기
 import EditBoard from "./components/Board/EditBoard"; // 마이페이지
 import MyPage from './components/MyPage/MyPage'; // 마이페이지
+import SignupSelection from './components/Signup/SignupSelection/SignupSelection';
+import SignupGeneral from './components/Signup/SignupGeneral/SignupGeneral';
+import SignupVet from './components/Signup/SignupVet/SignupVet';
+import SignupSeller from "./components/Signup/SignupSeller/SignupSeller";
+import Store from './components/Store/Store';
+import Products from './components/Store/Products/Products';
+import Best from './components/Store/Best/Best';
+import Cart from "./components/Store/Cart/Cart";
+import ProtectedRoute from "./components/ProtectedRoute";
+import AdminPage from "./components/AdminPage/AdminPage";
+import Dashboard from "./components/AdminPage/Dashboard/Dashboard";
+import VetRanking from "./components/AdminPage/Dashboard/VetRanking/VetRanking";
+import DiseaseRanking from "./components/AdminPage/Dashboard/DiseaseRanking/DiseaseRanking";
+import BreedRanking from "./components/AdminPage/Dashboard/BreedRanking/BreedRanking";
+import SignupRanking from "./components/AdminPage/Dashboard/SignupRanking/SignupRanking";
+import ProductRanking from "./components/AdminPage/Dashboard/ProductRanking/ProductRanking";
+import OriginRanking from "./components/AdminPage/Dashboard/OriginRanking/OriginRanking";
+
+
 
 import './App.css'; // 스타일링
 

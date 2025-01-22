@@ -19,6 +19,10 @@ public interface ConsultationRequestByStatusRepository extends CassandraReposito
 //    @Query("SELECT * FROM consultation_requests_by_status WHERE request_id = :requestId ALLOW FILTERING") // ALLOW FILTERING 추가
 //    Optional<ConsultationRequestByStatus> findByRequestId(@Param("requestId") UUID requestId);
 
+    // Pending인 상태의 상담 내역 수 보여주기
+    @Query("SELECT count(*) FROM final.consultation_requests_by_status WHERE status = 'pending' AND vet_id = ?0 ALLOW FILTERING")
+    long countPendingConsultationsByVetId(UUID vetId);
+
     // request_id와 status를 함께 사용하여 쿼리
     @Query("SELECT * FROM consultation_requests_by_status WHERE request_id = :requestId AND status = :status ALLOW FILTERING")
     Optional<ConsultationRequestByStatus> findByRequestIdAndStatus(@Param("requestId") UUID requestId, @Param("status") String status);

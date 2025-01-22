@@ -12,6 +12,7 @@ function Header() {
 
   const checkSession = async () => {
     try {
+      console.log("checkSession 시작");
       const response = await fetch(`${API_BASE_URL}/user/me`, {
         method: "GET",
         credentials: "include",
@@ -19,12 +20,22 @@ function Header() {
 
       if (response.ok) {
         const userData = await response.json();
-        console.log("사용자 데이터: ", userData);
+        console.log("사용자 데이터: ", userData); // 사용자 데이터 확인
+
+        // user 객체에서 userRole과 userId 추출
+        const { user } = userData;
+        // 구조분해 할당을 사용하여 userRole 값 추출
+        const { userRole, userId } = user;
+        console.log("userRole 값: ", userRole);
         setUser(userData);
 
-        if (userData.userRole === "VET") {
-          sessionStorage.setItem("vetId", userData.userId); // Save vetId for future use
-          fetchRequestCount(userData.userId);  // Fetch pending request count for VET users
+        if (userRole === "VET") {
+          console.log("userRole은 VET입니다.") // 추가
+          sessionStorage.setItem("vetId", userId); // Save vetId for future use
+          console.log("fetchRequestCount 호출");
+          fetchRequestCount(userId);  // Fetch pending request count for VET users
+        } else{
+          console.log("userRole은 VET가 아닙니다");
         }
       } else {
         setUser(null);
@@ -35,23 +46,31 @@ function Header() {
     }
   };
 
-  const fetchRequestCount = async (vetId) => {
+  useEffect(() => {
+    console.log("useEffect 실행됨");
+    checkSession();
+  }, []);
+
+  const fetchRequestCount = async (userId) => {
     try {
-      const response = await fetch(`${API_BASE_URL}/consultations/${vetId}/pendingRequestCount`);
+      console.log("API 호출 시작: ", `${API_BASE_URL}/consultations/${userId}/pendingRequestCount`);
+      const response = await fetch(`${API_BASE_URL}/consultations/${userId}/pendingRequestCount`);
       if (response.ok) {
         const count = await response.json();
-        setRequestCount(count);  // Update the requestCount state
+        console.log("Pending count: ", count);
+        setRequestCount(count);
       } else {
-        console.error("미확인 상담 요청 수를 가져오는 데 실패했습니다.");
+        const errorText = await response.text();
+        console.error("미확인 상담 요청 수를 가져오는 데 실패했습니다:", errorText);
       }
     } catch (error) {
       console.error("요청 수 가져오기 실패:", error);
     }
   };
 
-  useEffect(() => {
-    checkSession();
-  }, []);
+
+
+
 
   const handleLogout = async () => {
     try {
@@ -144,7 +163,7 @@ function Header() {
             {user && user.userRole === "VET" && (
                 <li>
                   <Link to="/clinic/request" onClick={(e) => handleNavigateToPage(e, "/clinic/request")}>
-                    상담 내역 <span className="badge">{requestCount}</span>
+                    상담 내역 <span className="badge">{requestCount > 0 ? requestCount : null}</span>
                   </Link>
                 </li>
             )}
