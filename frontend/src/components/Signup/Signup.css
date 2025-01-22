@@ -1,0 +1,148 @@
+.signup-container {
+  max-width: 450px; /* 컨테이너 너비 */
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.signup-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-container input,
+.signup-container select {
+  width: 100%; /* 모든 입력 필드와 선택 박스의 너비 통일 */
+  padding: 12px;
+  margin: 10px 0 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  box-sizing: border-box; /* 패딩 포함한 너비 계산 */
+}
+
+.signup-container input:focus,
+.signup-container select:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+.signup-container button {
+  width: 100%; /* 버튼 너비 통일 */
+  padding: 12px;
+  background: linear-gradient(90deg, #00fcd1, #04dfbd); /* 로그인 버튼 색상 동일하게 적용 */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-container button:hover {
+  background: linear-gradient(90deg, #04dfbd, #00fcd1); /* 호버 효과도 로그인 버튼과 동일 */
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px; /* 에러 메시지를 입력 필드 아래로 */
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.address-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+}
+
+.address-modal button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.address-modal button:hover {
+  background-color: #218838;
+}
+
+.gender-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.gender-field label {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.gender-field select {
+  width: 100%; /* 성별 선택 박스 너비 통일 */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.birthdate-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.birthdate-field input {
+  width: 100%; /* 생년월일 필드도 동일한 너비로 */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.birthdate-field span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.error-below-button {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px; /* 버튼과 에러 메시지 간격 */
+  text-align: center; /* 가운데 정렬 */
+}

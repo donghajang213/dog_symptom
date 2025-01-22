@@ -1,0 +1,43 @@
+.post-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+textarea,
+input[type="text"],
+.ck-editor__editable {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-button,
+.submit-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.list-button:hover,
+.submit-button:hover {
+  background-color: #0056b3;
+}

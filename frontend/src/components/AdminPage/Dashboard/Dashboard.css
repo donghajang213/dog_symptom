@@ -1,0 +1,44 @@
+/*
+body {
+    background-color: #1E1E2E;
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+}
+*/
+
+.dashboard {
+  padding: 20px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dashboard-card {
+  background-color: #2A2B3C;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.card-icon {
+  font-size: 36px;
+  color: #FFA500;
+  margin-bottom: 10px;
+}
+
+.dashboard-graph {
+  grid-column: span 3;
+  background-color: #2A2B3C;
+  border-radius: 12px;
+  padding: 20px;
+}

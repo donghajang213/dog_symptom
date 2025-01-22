@@ -1,0 +1,21 @@
+.custom-modal .modal-dialog {
+    max-width: 600px; /* Control modal width */
+    margin: 1.75rem auto;
+}
+
+.custom-modal .modal-content {
+    border-radius: 8px; /* Rounded corners for better UI */
+    max-height: 80vh; /* Adjust height relative to viewport */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.custom-modal img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto; /* Ensure images are not stretched */
+}
+
+.custom-modal .modal-footer button {
+    margin: 0 5px;
+}

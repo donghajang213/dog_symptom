@@ -1,0 +1,21 @@
+/* ProductRanking.css */
+.product-ranking-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-ranking-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.recharts-bar-rectangles .recharts-bar-rectangle:hover {
+    fill: #76c7c0;
+}

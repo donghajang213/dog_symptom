@@ -1,0 +1,101 @@
+.gpt-consult-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-section h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.upload-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.image-upload-input {
+  margin-bottom: 15px;
+}
+
+.uploaded-image {
+  margin-top: 15px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.message-container {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.message {
+  margin-bottom: 15px;
+}
+
+.message-bubble {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 20px;
+  max-width: 70%;
+  line-height: 1.4;
+}
+
+.user-message .message-bubble {
+  background-color: #e6f7ff;
+  color: #333;
+  align-self: flex-end;
+}
+
+.gpt-message .message-bubble {
+  background-color: #f1f1f1;
+  color: #333;
+  align-self: flex-start;
+}
+
+.message-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.send-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+}

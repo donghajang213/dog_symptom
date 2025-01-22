@@ -1,0 +1,56 @@
+.user-info {
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333; /* 어두운 회색 글씨 색 */
+}
+
+.delete-button {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: darkred;
+}
+
+.select-all {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff; /* 테이블 배경을 흰색으로 설정 */
+}
+
+table th, table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ccc;
+  color: #333; /* 글자색을 어두운 회색으로 설정 */
+}
+
+table th {
+  background-color: #333; /* 헤더 배경을 어두운 회색으로 설정 */
+  color: white; /* 흰색 글씨 */
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* 짝수 행 배경은 밝은 회색 */
+}
+
+table tr:nth-child(odd) {
+  background-color: #fff; /* 홀수 행 배경은 흰색 */
+}
+
+table tr:hover {
+  background-color: #f1f1f1; /* 마우스 올리면 배경색 변화 */
+}

@@ -1,0 +1,74 @@
+/* PetRanking.css */
+
+/* 전체 컨테이너 스타일 */
+.pet-ranking-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 그래프 제목 스타일 */
+.pet-ranking-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 로딩 중 텍스트 */
+.pet-ranking-container .loading {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 오류 메시지 스타일 */
+.pet-ranking-container .error {
+  font-size: 1.2rem;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* X축과 Y축 스타일 */
+.recharts-surface {
+  font-family: 'Arial', sans-serif;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4e4e4e;
+}
+
+/* BarChart 스타일 */
+.recharts-bar-rectangles .recharts-bar-rectangle {
+  transition: fill 0.3s ease-in-out;
+}
+
+.recharts-bar-rectangles .recharts-bar-rectangle:hover {
+  fill: #76c7c0;
+}
+
+/* 툴팁 스타일 */
+.recharts-tooltip-wrapper {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.recharts-tooltip-item {
+  margin-bottom: 5px;
+}
+
+.recharts-tooltip-item-label {
+  font-weight: bold;
+  color: #333;
+}

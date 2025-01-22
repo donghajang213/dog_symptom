@@ -1,0 +1,70 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.4.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+ext {
+	set('springAiVersion', "1.0.0-M4")
+}
+
+dependencies {
+	implementation 'com.datastax.oss:java-driver-core:4.15.0'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springframework.session:spring-session-data-redis'
+	implementation 'org.springframework.data:spring-data-redis:3.4.1'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// implementation "org.springframework.ai.spring-ai-core:${springAiVersion}"
+	// implementation 'org.springframework.ai:spring-ai-redis-store-spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket' // WebSocket 추가
+	implementation 'com.fasterxml.jackson.core:jackson-databind'
+	implementation 'javax.mail:javax.mail-api:1.6.2'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation "org.springframework.ai:spring-ai-core:${springAiVersion}"
+	// implementation 'org.springframework.boot:spring-boot-starter-websocket'  // WebSocket
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+}
+
+//dependencyManagement {
+//  imports {
+//      mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
+//  }
+//}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

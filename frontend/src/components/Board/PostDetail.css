@@ -1,0 +1,139 @@
+.board-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.board-images img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.board-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.floating-button button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.floating-button button:hover {
+  background-color: #0056b3;
+}
+
+/* 댓글 섹션 스타일 */
+.comments-section {
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+.comments-section h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  color: #333;
+}
+
+.comments-section h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+/* 댓글 항목 */
+.comment-item {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start; /* 좌측 정렬 */
+}
+
+.comment-info {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* 부모 크기 기준으로 정렬 */
+}
+
+.comment-content {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  width: 100%; /* 댓글 내용을 좌측 정렬 */
+}
+
+.comment-image {
+  width: 120px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* 댓글 작성 폼 */
+.comment-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start; /* 좌측 정렬 */
+}
+
+.comment-form textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: none;
+  font-size: 14px;
+}
+
+.comment-form input[type="file"] {
+  border: none;
+}
+
+.comment-form button {
+  align-self: flex-start;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form button:hover {
+  background-color: #e0a800;
+}
+
+
+

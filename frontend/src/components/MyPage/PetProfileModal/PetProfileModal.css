@@ -1,0 +1,71 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.detail-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.pet-info {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.pet-info p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+button.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.close-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}

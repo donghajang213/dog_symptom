@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+.gps-coordinates {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vet-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 22%; /* 한 행에 4개씩 표시되도록 설정 */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.vet-item img {
+    width: 200px;  /* 너비를 100px로 고정 */
+    height: 200px; /* 높이를 100px로 고정 */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover; /* 이미지를 요소 내에 맞춤 */
+}
+
+.vet-item h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.vet-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input, .search-bar select {
+    padding: 10px;
+    font-size: 1em;
+    margin: 5px;
+}
+
+.vet-details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.vet-details-image {
+    width: 300px;  /* 선택된 수의사 이미지 크기도 동일하게 설정 */
+    height: 300px; /* 선택된 수의사 이미지 크기도 동일하게 설정 */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover; /* 이미지를 요소 내에 맞춤 */
+}
+
+

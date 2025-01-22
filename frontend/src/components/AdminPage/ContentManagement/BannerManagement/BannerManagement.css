@@ -1,0 +1,116 @@
+.banner-management {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+
+.banner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.banner-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.banner-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.banner-form button:hover {
+  background-color: #45a049;
+}
+
+.banner-preview {
+  margin-bottom: 20px;
+}
+
+.banner-preview h4 {
+  margin-bottom: 10px;
+}
+
+.banner-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.banner-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer; /* 링크로 이동 가능하게 설정 */
+}
+
+.banner-card p {
+  margin: 5px 0;
+}
+
+.banner-card .button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.banner-card .edit-button {
+  padding: 5px 15px;
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.banner-card .edit-button:hover {
+  background-color: #e0a800;
+}
+
+.banner-card .delete-button {
+  padding: 5px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.banner-card .delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.banner-card button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.banner-card button:hover {
+  background-color: #d32f2f;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}

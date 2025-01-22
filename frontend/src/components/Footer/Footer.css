@@ -1,0 +1,68 @@
+/* 전체 페이지 레이아웃 설정 */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* html, body가 전체 화면을 차지하도록 설정 */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 화면 전체 높이를 기준으로 설정 */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* 남은 공간을 채우도록 설정 */
+}
+
+main {
+  flex: 1; /* 메인 콘텐츠가 남은 공간을 채우도록 설정 */
+}
+
+/* 푸터 스타일 */
+footer {
+  background-color: #333; /* 어두운 배경색 */
+  color: white; /* 텍스트 흰색 */
+  padding: 20px 0; /* 위아래 여백 */
+  text-align: center;
+  margin-top: auto; /* 푸터를 항상 하단에 배치 */
+}
+
+.footer-container {
+  max-width: 1200px; /* 푸터 내용의 최대 너비 */
+  margin: 0 auto; /* 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* 내부 요소 간격 */
+}
+
+.footer-logo h2 {
+  font-size: 1.5em; /* 브랜드 로고 크기 */
+  margin: 0;
+  color: #007bff; /* 브랜드 강조 색상 */
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px; /* 링크 간 간격 */
+  flex-wrap: wrap; /* 작은 화면에서 링크 줄바꿈 */
+}
+
+.footer-links a {
+  color: white; /* 링크 기본 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 0.9em;
+  transition: color 0.3s ease; /* 호버 시 부드러운 전환 */
+}
+
+.footer-links a:hover {
+  color: #007bff; /* 링크 호버 시 강조 색상 */
+}
+
+.footer-copyright {
+  font-size: 0.8em; /* 저작권 텍스트 크기 */
+  margin-top: 10px;
+}

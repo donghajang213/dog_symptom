@@ -1,0 +1,70 @@
+.admin-page {
+  display: flex;
+  height: 100vh;
+  background-color: #1e1e2f; /* 다크 테마 배경색 */
+  color: #fff;
+}
+
+.admin-sidebar {
+  width: 250px;
+  background-color: #252533; /* 네비게이션 바 색상 */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-sidebar li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.admin-sidebar .menu-title {
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.admin-sidebar .menu-title:hover {
+  background-color: #3a3a56;
+}
+
+.admin-sidebar .submenu {
+  list-style: none;
+  padding: 10px 0 0 15px;
+  margin: 0;
+  background-color: #2d2d44;
+  border-left: 3px solid #3a3a56;
+  border-radius: 0 4px 4px 0;
+}
+
+.admin-sidebar .submenu li {
+  margin-bottom: 10px;
+}
+
+.admin-sidebar .submenu a {
+  font-size: 14px;
+  padding: 5px 10px;
+  color: #cfcfe8;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.admin-sidebar .submenu a:hover {
+  background-color: #3a3a56;
+}
+
+.admin-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #292940;
+  overflow-y: auto;
+}
